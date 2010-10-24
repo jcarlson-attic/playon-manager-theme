@@ -1,0 +1,51 @@
+@external gwt-Button;
+
+@sprite .gwt-Button {
+  background-color: ACTION_COLOR;
+  cursor: pointer;
+  font-size: FONT_SIZE;
+  gwt-image: "button_normal";
+  height: auto;
+  margin: 0;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+
+@sprite .gwt-Button:hover {
+  background-color: ACTION_HIGHLIGHT_COLOR;
+  gwt-image: "button_highlight";
+  height: auto;
+}
+@sprite .gwt-Button[disabled] {
+  background-color: DARK;
+  cursor: default;
+  color: LIGHT_COLOR;
+  gwt-image: "button_disabled";
+  height: auto;
+}
+
+@if user.agent safari {
+  .gwt-Button {
+    border: none;
+    -webkit-border-radius: BORDER_RADIUS;
+  }
+}
+
+@elif user.agent gecko1_8 {
+  .gwt-Button {
+    border: none;
+    -moz-border-radius: BORDER_RADIUS;
+  }
+}
+
+@elif user.agent ie, ie8 {
+  .gwt-Button {
+    border: 1px outset DARKER_COLOR;
+  }
+  .gwt-Button:active {
+    border: 1px inset DARKER_COLOR;
+  }
+  .gwt-Button[disabled]:active {
+    border: 1px outset DARKER_COLOR;
+  }
+}

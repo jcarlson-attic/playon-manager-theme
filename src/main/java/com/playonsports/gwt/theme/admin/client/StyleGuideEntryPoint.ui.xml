@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:w="urn:import:com.playonsports.gwt.theme.admin.client.widget">
+
+	<ui:with field="resources"
+		type="com.playonsports.gwt.theme.admin.client.Resources" />
+
+	<ui:style>
+		.navigation {
+			float: left;
+			width: 200px;
+		}
+		
+		.typefaces {
+			float: left;
+			height: 500px;
+			width: 400px;
+		}
+	</ui:style>
+
+	<g:TabLayoutPanel barHeight="{resources.room_tab_active.getHeight}"
+		styleName="{resources.style.roomLayoutPanel}">
+		<g:tab>
+			<g:header>Basic Text and Layout</g:header>
+
+			<g:FlowPanel>
+
+				<w:MenuWidget addStyleNames="{style.navigation}" title="Navigation Box">
+					<li>
+						<a href="#">Link One</a>
+					</li>
+					<li>
+						<a href="#">Link Two</a>
+					</li>
+					<li>
+						<a class="active" href="#">Current Link</a>
+					</li>
+				</w:MenuWidget>
+
+				<g:TabLayoutPanel barHeight="{resources.style.tabBarHeight}"
+					styleName="{resources.style.tabLayoutPanel}" addStyleNames="{style.typefaces}">
+					<g:tab>
+						<g:header>Typeface</g:header>
+						<g:HTML>
+							<h1>Headline H1</h1>
+							<h2>Headline H2</h2>
+							<h3>Headline H3</h3>
+							<h4>Headline H4</h4>
+							<h5>Headline H5</h5>
+							<h6>Headline H6</h6>
+							<p>
+								Paragraph text style.
+								<strong>Bold</strong>
+								,
+								<em>Italic</em>
+								,
+								<strong>
+									<em>Bold Italic</em>
+								</strong>
+							</p>
+							<pre>Pre-formatted text style</pre>
+							<a href="#">Hyperlink</a>
+						</g:HTML>
+					</g:tab>
+					<g:tab>
+						<g:header>Lists</g:header>
+						<g:HTML>
+							<ol>
+								<li>Item One</li>
+								<li>Item Two</li>
+								<li>Item Three</li>
+							</ol>
+							<ul>
+								<li>Item</li>
+								<li>Item</li>
+								<li>Item</li>
+							</ul>
+						</g:HTML>
+					</g:tab>
+				</g:TabLayoutPanel>
+
+			</g:FlowPanel>
+		</g:tab>
+		<g:tab>
+			<g:header>Forms and Buttons</g:header>
+			<g:HTMLPanel>
+				<g:Button>Normal Button</g:Button>
+				<g:Button enabled="false">Disabled Button</g:Button>
+			</g:HTMLPanel>
+		</g:tab>
+	</g:TabLayoutPanel>
+
+</ui:UiBinder>

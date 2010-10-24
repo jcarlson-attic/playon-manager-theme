@@ -1,0 +1,26 @@
+/* Color palette */
+@def ACTION_COLOR rgb(255,153,0);
+@def ACTION_HIGHLIGHT_COLOR rgb(255,204,153);
+
+@def DARK_COLOR rgb(102,102,102);
+@def DARKER_COLOR rgb(51,51,51);
+@def DARKEST_COLOR rgb(0,0,0);
+
+@def LIGHT_COLOR rgb(204,204,204);
+@def LIGHTER_COLOR rgb(238,238,238);
+@def LIGHTEST_COLOR rgb(255,255,255);
+
+@def NAVIGATION_MENU_COLOR rgb(68, 68, 68);
+
+/* Typeface definitions */
+@def PREFERRED_FONT "Arial";
+@def FIXED_FONT "Courier New";
+@def SAFE_FONT sans-serif;
+@def SAFE_FIXED_FONT courier;
+@def FONT_SIZE small;
+
+/* Decoration definitions */
+@def BORDER_RADIUS 10px;
+
+/* Exported definitions */
+@def tabBarHeight 35;

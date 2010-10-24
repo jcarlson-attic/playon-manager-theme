@@ -1,0 +1,39 @@
+/* General Page Styles */
+@sprite body {
+  background-color: DARKER_COLOR;
+  border: 0px;
+  gwt-image: "background";
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* General Text Styles */
+body, table td, select {
+  font-family: PREFERRED_FONT, SAFE_FONT;
+  font-size: FONT_SIZE;
+  color: LIGHTEST_COLOR;
+}
+select {
+  color: DARKEST_COLOR;
+}
+pre {
+  font-family: FIXED_FONT, SAFE_FIXED_FONT;
+  font-size: FONT_SIZE;
+}
+a, a:link, a:visited {
+  color: ACTION_COLOR;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  color: ACTION_HIGHLIGHT_COLOR;
+  text-decoration: underline;
+}
+
+@if !user.agent ie ie8 {
+  body, table td, select {
+    text-shadow: 2px 2px 2px DARKER;
+  }
+}

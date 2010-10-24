@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<parent>
+		<artifactId>com.playonsports.web.gwt-pom-parent</artifactId>
+		<groupId>com.playonsports.web</groupId>
+		<version>1.17</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.playonsports.gwt</groupId>
+	<artifactId>com.playonsports.gwt.theme</artifactId>
+	<name>PlayON! Sports GWT Theme</name>
+	<version>0.1-SNAPSHOT</version>
+
+	<repositories>
+		<repository>
+			<id>playon-eb4c6c8502b4464691d9bd5f03752406.s3.amazonaws.com</id>
+			<name>2080 Media M2 Repository</name>
+			<url>http://playon-eb4c6c8502b4464691d9bd5f03752406.s3.amazonaws.com/maven2</url>
+		</repository>
+	</repositories>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<configuration>
+					<modules>
+						<module>com.playonsports.gwt.theme.admin.Admin</module>
+					</modules>
+					<soyc>false</soyc>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+	</dependencies>
+
+
+</project>

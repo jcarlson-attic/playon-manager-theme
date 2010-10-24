@@ -1,0 +1,135 @@
+@external gwt-TabLayoutPanelTabs, gwt-TabLayoutPanelContent, gwt-TabLayoutPanelTab, gwt-TabLayoutPanelTabInner, gwt-TabLayoutPanelTab-selected;
+
+/* Common TabLayoutPanel styles */
+.gwt-TabLayoutPanelTabs {
+  margin-left: 20px;
+}
+
+.gwt-TabLayoutPanelTab {
+  background-color: DARK_COLOR;
+  color: LIGHT_COLOR;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  height: auto;
+  margin: 0 0 0 5px;
+  padding: 3px 15px 2px;
+  text-align: center;
+}
+
+@if user.agent safari {
+  .gwt-TabLayoutPanelTab {
+    -webkit-border-top-left-radius: BORDER_RADIUS;
+    -webkit-border-top-right-radius: BORDER_RADIUS;
+  }
+}
+
+@elif user.agent gecko1_8 {
+  .gwt-TabLayoutPanelTab {
+    -moz-border-radius-topleft: BORDER_RADIUS;
+    -moz-border-radius-topright: BORDER_RADIUS;
+  }
+}
+
+.gwt-TabLayoutPanelTab-selected {
+  background-color: LIGHT_COLOR;
+  color: DARKER_COLOR;
+  cursor: default;
+}
+
+.gwt-TabLayoutPanelTab .gwt-TabLayoutPanelTabInner {
+  
+}
+
+.gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner {
+  
+}
+
+.gwt-TabLayoutPanelContent {
+  border: 1px solid DARK_COLOR;
+  overflow: hidden;
+  margin: 0 10px 10px 10px;
+}
+
+@if user.agent safari {
+  .gwt-TabLayoutPanelContent {
+    -webkit-border-radius: BORDER_RADIUS;
+  }
+}
+@elif user.agent gecko1_8 {
+  .gwt-TabLayoutPanelContent {
+    -moz-border-radius: BORDER_RADIUS;
+  }
+}
+
+
+/* RoomLayoutPanel styles */
+.roomLayoutPanel {
+  
+}
+
+.roomLayoutPanel .gwt-TabLayoutPanelTabs {
+  
+}
+
+@sprite .roomLayoutPanel .gwt-TabLayoutPanelTab {
+  font-size: 1.2em;
+  gwt-image: "room_tab_inactive";
+  margin-top: 2px;
+  margin-left: 5px;
+  padding: 0 25px;
+}
+
+@sprite .roomLayoutPanel .gwt-TabLayoutPanelTab-selected {
+  background-color: LIGHT_COLOR;
+  color: DARKER_COLOR;
+  gwt-image: "room_tab_active";
+  margin-top: 0px;
+}
+
+.roomLayoutPanel .gwt-TabLayoutPanelTabInner {
+  padding-top: 15px;
+}
+
+.roomLayoutPanel .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner {
+  padding-top: 17px;
+}
+
+.roomLayoutPanel .gwt-TabLayoutPanelContent {
+  
+}
+
+
+/* TabLayoutPanel styles */
+
+.tabLayoutPanel {
+  
+}
+
+.tabLayoutPanel .gwt-TabLayoutPanelTabs {
+  
+}
+
+.tabLayoutPanel .gwt-TabLayoutPanelTab {
+  background: DARK_COLOR;
+  font-size: 1.1em;
+  height: auto;
+  margin: 0 0 0 5px;
+  padding: 3px 15px 2px;
+}
+
+.tabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+  background: LIGHT_COLOR;
+}
+
+.tabLayoutPanel .gwt-TabLayoutPanelTab .gwt-TabLayoutPanelTabInner {
+  padding-top: 0;
+}
+
+.tabLayoutPanel .gwt-TabLayoutPanelTab-selected .gwt-TabLayoutPanelTabInner {
+  
+}
+
+.tabLayoutPanel .gwt-TabLayoutPanelContent {
+  
+}
